@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="sytles.css">
+    <script defer src="script.js"></script>
+</head>
+<body class="contact-page"> 
+    <header class="main-header">
+        <h1>Contact Us</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <img id= "gif "src="gif.gif" alt="A description of the GIF" height="900" width="900">
+        <form onsubmit="return validateForm()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required placeholder="example@aston.ac.uk" pattern=".+@aston\.ac\.uk">
+
+            <label for="confirm-email">Confirm Email:</label>
+            <input type="email" id="confirm-email" required placeholder="example@aston.ac.uk" pattern=".+@aston\.ac\.uk" onblur="checkEmails()">
+
+            <label for="contact-method">Preferred Contact Method:</label>
+            <select id="contact-method" required>
+                <option value="phone">Phone</option>
+                <option value="email">Email</option>
+            </select>
+
+            <label for="contact-number">Contact Number:</label>
+            <input type="tel" id="contact-number" required pattern="[0-9]{10}" placeholder="Enter 10-digit phone number">
+
+            <label for="date">Select Date:</label>
+            <input type="date" id="date" required onblur="checkDate()">
+
+            <input type="submit" value="Book Now">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Made by Kushal Subedi</p>
+    </footer>
+</body>
+</html>
